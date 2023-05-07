@@ -7,8 +7,9 @@
  * React.ReactChildren;
  * React.ReactChild[];
  */
+import { PropsWithChildren } from "react";
 
-type BoxProps = { children: React.ReactNode /* 👈 Get rid of this! */ };
+type BoxProps = PropsWithChildren<{}>; /* 👈 Get rid of this! */
 
 const Box = ({ children }: BoxProps) => {
   return (
