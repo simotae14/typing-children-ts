@@ -9,11 +9,9 @@
  */
 import React, { PropsWithChildren } from "react";
 
-type BoxProps = PropsWithChildren<{
-  style: React.CSSProperties;
-}>;
+type BoxProps = { color?: 'red' | 'green' | 'blue' };
 
-const Box = ({ children, style }: BoxProps) => {
+const Box = ({ children, color = 'red' }: PropsWithChildren<BoxProps>) => {
   return (
     <section
       className="m-4"
