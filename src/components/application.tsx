@@ -7,11 +7,13 @@
  * React.ReactChildren;
  * React.ReactChild[];
  */
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 
-type BoxProps = PropsWithChildren<{}>; /* 👈 Get rid of this! */
+type BoxProps = PropsWithChildren<{
+  style: React.CSSProperties;
+}>;
 
-const Box = ({ children }: BoxProps) => {
+const Box = ({ children, style }: BoxProps) => {
   return (
     <section
       className="m-4"
